@@ -1,20 +1,75 @@
+using System;
 using UnityEngine;
+using UnityEngine.InputSystem;
+using static Gameplay.Input.Controls;
 
 namespace Gameplay.Input
 {
-    [CreateAssetMenu(menuName = "Gameplay/Input/Input Reader", fileName = "NewInputHandler")]
-    public class InputReader : ScriptableObject
+    [CreateAssetMenu(menuName = "Gameplay/Input/Input Reader", fileName = "NewInputReader")]
+    public class InputReader : ScriptableObject, IPlayerActions
     {
-        // Start is called before the first frame update
-        void Start()
-        {
+        public event Action<Vector2> OnAimInputUpdated;
+        public event Action<bool> OnAttackInputUpdated;
+        public event Action OnChangeWeaponInputUpdated;
+        public event Action<Vector2> OnMoveInputUpdated;
+        public event Action OnReloadInputUpdated;
 
+        private Controls controls;
+
+        private void OnEnable()
+        {
+            Init();           
         }
 
-        // Update is called once per frame
-        void Update()
+        private void Init()
         {
-
+            if (controls is not null)
+            {
+                return;
+            }
+            controls = new Controls();
+            controls.Player.SetCallbacks(this);
+            controls.Player.Enable();
         }
+
+        public void OnAim(InputAction.CallbackContext context)
+        {            
+            Vector2 aimRawInput = context.ReadValue<Vector2>();
+            OnAimInputUpdated?.Invoke(aimRawInput);
+        }
+
+        public void OnAttack(InputAction.CallbackContext context)
+        {
+            bool state = false;
+            switch (context.phase)
+            {                
+                case InputActionPhase.Performed:
+                    state = true;
+                    break;
+                case InputActionPhase.Canceled:
+                    state = false;
+                    break;
+                default:
+                    break;
+            }
+            OnAttackInputUpdated?.Invoke(state);
+        }
+
+        public void OnChangeWeapon(InputAction.CallbackContext context)
+        {
+            OnChangeWeaponInputUpdated?.Invoke();
+        }
+
+        public void OnMove(InputAction.CallbackContext context)
+        {
+            Vector2 rawMoveInput = context.ReadValue<Vector2>();
+            OnMoveInputUpdated?.Invoke(rawMoveInput);
+        }
+
+        public void OnReload(InputAction.CallbackContext context)
+        {
+            OnReloadInputUpdated?.Invoke();
+        }
+
     }
 }
