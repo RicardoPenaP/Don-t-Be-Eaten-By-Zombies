@@ -26,13 +26,49 @@ namespace Gameplay.InputReader
     ""name"": ""Controls"",
     ""maps"": [
         {
-            ""name"": ""MouseAndKeyboard"",
-            ""id"": ""56ad8d8a-cfe8-4526-9185-ca9654a10afc"",
+            ""name"": ""Player"",
+            ""id"": ""1ba0c89e-92f8-4d99-bac7-c6a203e2deac"",
             ""actions"": [
                 {
-                    ""name"": ""New action"",
+                    ""name"": ""Move"",
+                    ""type"": ""Value"",
+                    ""id"": ""3a03e99c-07c2-4a09-a541-38de4f966ed4"",
+                    ""expectedControlType"": ""Vector2"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": true
+                },
+                {
+                    ""name"": ""Aim"",
+                    ""type"": ""Value"",
+                    ""id"": ""86c283e7-e42f-40b9-a755-fae60bc60aa9"",
+                    ""expectedControlType"": ""Vector2"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": true
+                },
+                {
+                    ""name"": ""Attack"",
                     ""type"": ""Button"",
-                    ""id"": ""702988b9-970a-4326-8360-0d5c46fc1626"",
+                    ""id"": ""a1205b02-7d8b-4a8c-a13b-ed28bd152d5d"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Reload"",
+                    ""type"": ""Button"",
+                    ""id"": ""3e9f940a-b66d-4b99-9110-bfc69c0dd487"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Change Weapon"",
+                    ""type"": ""Button"",
+                    ""id"": ""266fdc2b-d986-4cf7-952f-36dc7291b647"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """",
@@ -41,55 +77,193 @@ namespace Gameplay.InputReader
             ],
             ""bindings"": [
                 {
-                    ""name"": """",
-                    ""id"": ""9f27e63e-3aff-4464-a620-370f09336ebd"",
-                    ""path"": """",
+                    ""name"": ""LStick"",
+                    ""id"": ""e3b78c3a-51a2-4513-9530-4ae40cad1069"",
+                    ""path"": ""2DVector"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""New action"",
+                    ""action"": ""Move"",
+                    ""isComposite"": true,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""up"",
+                    ""id"": ""85d2e060-e5e1-430e-a710-668e81441c04"",
+                    ""path"": ""<Gamepad>/leftStick/up"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""TouchScreen"",
+                    ""action"": ""Move"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""down"",
+                    ""id"": ""b322d467-11ed-46fa-b307-98a31eec0566"",
+                    ""path"": ""<Gamepad>/leftStick/down"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""TouchScreen"",
+                    ""action"": ""Move"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""left"",
+                    ""id"": ""74d39165-40c9-48ba-ae00-67fdd454c43c"",
+                    ""path"": ""<Gamepad>/rightStick/left"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""TouchScreen"",
+                    ""action"": ""Move"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""right"",
+                    ""id"": ""2522c8e3-d95d-44bd-83c7-a7d8dc38f120"",
+                    ""path"": ""<Gamepad>/leftStick/right"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""TouchScreen"",
+                    ""action"": ""Move"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""RStick"",
+                    ""id"": ""4958b7d9-9ac5-4541-9d5d-83f59d164f91"",
+                    ""path"": ""2DVector"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Aim"",
+                    ""isComposite"": true,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""up"",
+                    ""id"": ""79b1c832-a0fe-4072-9952-7c5f5c54e67c"",
+                    ""path"": ""<Gamepad>/rightStick/up"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""TouchScreen"",
+                    ""action"": ""Aim"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""down"",
+                    ""id"": ""c12b607c-e3d3-462c-836f-ac4e7d9aec8d"",
+                    ""path"": ""<Gamepad>/rightStick/down"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""TouchScreen"",
+                    ""action"": ""Aim"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""left"",
+                    ""id"": ""e079897e-fc80-4a30-8338-0eadd0016564"",
+                    ""path"": ""<Gamepad>/rightStick/left"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""TouchScreen"",
+                    ""action"": ""Aim"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""right"",
+                    ""id"": ""8f8b1978-2c19-462a-aa1d-d58c24a90060"",
+                    ""path"": ""<Gamepad>/rightStick/right"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""TouchScreen"",
+                    ""action"": ""Aim"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""7b2c1c92-a0d6-4790-b610-554a62605cd5"",
+                    ""path"": ""<Gamepad>/rightShoulder"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""TouchScreen"",
+                    ""action"": ""Attack"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
-                }
-            ]
-        },
-        {
-            ""name"": ""TouchScreen"",
-            ""id"": ""acec014f-d7d7-425f-97b1-b25028e8e02c"",
-            ""actions"": [
-                {
-                    ""name"": ""New action"",
-                    ""type"": ""Button"",
-                    ""id"": ""569eadfd-9b6d-40b5-8df7-36f8ae6dc134"",
-                    ""expectedControlType"": ""Button"",
-                    ""processors"": """",
-                    ""interactions"": """",
-                    ""initialStateCheck"": false
-                }
-            ],
-            ""bindings"": [
+                },
                 {
                     ""name"": """",
-                    ""id"": ""f65b35ef-2c80-4bc1-b20c-39200b8a0ec4"",
-                    ""path"": """",
+                    ""id"": ""c284e0b8-97d9-49f1-b447-3d5d6e80a0eb"",
+                    ""path"": ""<Gamepad>/buttonWest"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""New action"",
+                    ""groups"": ""TouchScreen"",
+                    ""action"": ""Reload"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""9634d609-5069-4009-9dde-06fde7f6189a"",
+                    ""path"": ""<Gamepad>/buttonNorth"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""TouchScreen"",
+                    ""action"": ""Change Weapon"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
             ]
         }
     ],
-    ""controlSchemes"": []
+    ""controlSchemes"": [
+        {
+            ""name"": ""KeyboardAndMouse"",
+            ""bindingGroup"": ""KeyboardAndMouse"",
+            ""devices"": [
+                {
+                    ""devicePath"": ""<Keyboard>"",
+                    ""isOptional"": false,
+                    ""isOR"": false
+                },
+                {
+                    ""devicePath"": ""<Mouse>"",
+                    ""isOptional"": false,
+                    ""isOR"": false
+                }
+            ]
+        },
+        {
+            ""name"": ""TouchScreen"",
+            ""bindingGroup"": ""TouchScreen"",
+            ""devices"": [
+                {
+                    ""devicePath"": ""<Touchscreen>"",
+                    ""isOptional"": false,
+                    ""isOR"": false
+                },
+                {
+                    ""devicePath"": ""<Gamepad>"",
+                    ""isOptional"": true,
+                    ""isOR"": false
+                }
+            ]
+        }
+    ]
 }");
-            // MouseAndKeyboard
-            m_MouseAndKeyboard = asset.FindActionMap("MouseAndKeyboard", throwIfNotFound: true);
-            m_MouseAndKeyboard_Newaction = m_MouseAndKeyboard.FindAction("New action", throwIfNotFound: true);
-            // TouchScreen
-            m_TouchScreen = asset.FindActionMap("TouchScreen", throwIfNotFound: true);
-            m_TouchScreen_Newaction = m_TouchScreen.FindAction("New action", throwIfNotFound: true);
+            // Player
+            m_Player = asset.FindActionMap("Player", throwIfNotFound: true);
+            m_Player_Move = m_Player.FindAction("Move", throwIfNotFound: true);
+            m_Player_Aim = m_Player.FindAction("Aim", throwIfNotFound: true);
+            m_Player_Attack = m_Player.FindAction("Attack", throwIfNotFound: true);
+            m_Player_Reload = m_Player.FindAction("Reload", throwIfNotFound: true);
+            m_Player_ChangeWeapon = m_Player.FindAction("Change Weapon", throwIfNotFound: true);
         }
 
         public void Dispose()
@@ -148,104 +322,108 @@ namespace Gameplay.InputReader
             return asset.FindBinding(bindingMask, out action);
         }
 
-        // MouseAndKeyboard
-        private readonly InputActionMap m_MouseAndKeyboard;
-        private List<IMouseAndKeyboardActions> m_MouseAndKeyboardActionsCallbackInterfaces = new List<IMouseAndKeyboardActions>();
-        private readonly InputAction m_MouseAndKeyboard_Newaction;
-        public struct MouseAndKeyboardActions
+        // Player
+        private readonly InputActionMap m_Player;
+        private List<IPlayerActions> m_PlayerActionsCallbackInterfaces = new List<IPlayerActions>();
+        private readonly InputAction m_Player_Move;
+        private readonly InputAction m_Player_Aim;
+        private readonly InputAction m_Player_Attack;
+        private readonly InputAction m_Player_Reload;
+        private readonly InputAction m_Player_ChangeWeapon;
+        public struct PlayerActions
         {
             private @Controls m_Wrapper;
-            public MouseAndKeyboardActions(@Controls wrapper) { m_Wrapper = wrapper; }
-            public InputAction @Newaction => m_Wrapper.m_MouseAndKeyboard_Newaction;
-            public InputActionMap Get() { return m_Wrapper.m_MouseAndKeyboard; }
+            public PlayerActions(@Controls wrapper) { m_Wrapper = wrapper; }
+            public InputAction @Move => m_Wrapper.m_Player_Move;
+            public InputAction @Aim => m_Wrapper.m_Player_Aim;
+            public InputAction @Attack => m_Wrapper.m_Player_Attack;
+            public InputAction @Reload => m_Wrapper.m_Player_Reload;
+            public InputAction @ChangeWeapon => m_Wrapper.m_Player_ChangeWeapon;
+            public InputActionMap Get() { return m_Wrapper.m_Player; }
             public void Enable() { Get().Enable(); }
             public void Disable() { Get().Disable(); }
             public bool enabled => Get().enabled;
-            public static implicit operator InputActionMap(MouseAndKeyboardActions set) { return set.Get(); }
-            public void AddCallbacks(IMouseAndKeyboardActions instance)
+            public static implicit operator InputActionMap(PlayerActions set) { return set.Get(); }
+            public void AddCallbacks(IPlayerActions instance)
             {
-                if (instance == null || m_Wrapper.m_MouseAndKeyboardActionsCallbackInterfaces.Contains(instance)) return;
-                m_Wrapper.m_MouseAndKeyboardActionsCallbackInterfaces.Add(instance);
-                @Newaction.started += instance.OnNewaction;
-                @Newaction.performed += instance.OnNewaction;
-                @Newaction.canceled += instance.OnNewaction;
+                if (instance == null || m_Wrapper.m_PlayerActionsCallbackInterfaces.Contains(instance)) return;
+                m_Wrapper.m_PlayerActionsCallbackInterfaces.Add(instance);
+                @Move.started += instance.OnMove;
+                @Move.performed += instance.OnMove;
+                @Move.canceled += instance.OnMove;
+                @Aim.started += instance.OnAim;
+                @Aim.performed += instance.OnAim;
+                @Aim.canceled += instance.OnAim;
+                @Attack.started += instance.OnAttack;
+                @Attack.performed += instance.OnAttack;
+                @Attack.canceled += instance.OnAttack;
+                @Reload.started += instance.OnReload;
+                @Reload.performed += instance.OnReload;
+                @Reload.canceled += instance.OnReload;
+                @ChangeWeapon.started += instance.OnChangeWeapon;
+                @ChangeWeapon.performed += instance.OnChangeWeapon;
+                @ChangeWeapon.canceled += instance.OnChangeWeapon;
             }
 
-            private void UnregisterCallbacks(IMouseAndKeyboardActions instance)
+            private void UnregisterCallbacks(IPlayerActions instance)
             {
-                @Newaction.started -= instance.OnNewaction;
-                @Newaction.performed -= instance.OnNewaction;
-                @Newaction.canceled -= instance.OnNewaction;
+                @Move.started -= instance.OnMove;
+                @Move.performed -= instance.OnMove;
+                @Move.canceled -= instance.OnMove;
+                @Aim.started -= instance.OnAim;
+                @Aim.performed -= instance.OnAim;
+                @Aim.canceled -= instance.OnAim;
+                @Attack.started -= instance.OnAttack;
+                @Attack.performed -= instance.OnAttack;
+                @Attack.canceled -= instance.OnAttack;
+                @Reload.started -= instance.OnReload;
+                @Reload.performed -= instance.OnReload;
+                @Reload.canceled -= instance.OnReload;
+                @ChangeWeapon.started -= instance.OnChangeWeapon;
+                @ChangeWeapon.performed -= instance.OnChangeWeapon;
+                @ChangeWeapon.canceled -= instance.OnChangeWeapon;
             }
 
-            public void RemoveCallbacks(IMouseAndKeyboardActions instance)
+            public void RemoveCallbacks(IPlayerActions instance)
             {
-                if (m_Wrapper.m_MouseAndKeyboardActionsCallbackInterfaces.Remove(instance))
+                if (m_Wrapper.m_PlayerActionsCallbackInterfaces.Remove(instance))
                     UnregisterCallbacks(instance);
             }
 
-            public void SetCallbacks(IMouseAndKeyboardActions instance)
+            public void SetCallbacks(IPlayerActions instance)
             {
-                foreach (var item in m_Wrapper.m_MouseAndKeyboardActionsCallbackInterfaces)
+                foreach (var item in m_Wrapper.m_PlayerActionsCallbackInterfaces)
                     UnregisterCallbacks(item);
-                m_Wrapper.m_MouseAndKeyboardActionsCallbackInterfaces.Clear();
+                m_Wrapper.m_PlayerActionsCallbackInterfaces.Clear();
                 AddCallbacks(instance);
             }
         }
-        public MouseAndKeyboardActions @MouseAndKeyboard => new MouseAndKeyboardActions(this);
-
-        // TouchScreen
-        private readonly InputActionMap m_TouchScreen;
-        private List<ITouchScreenActions> m_TouchScreenActionsCallbackInterfaces = new List<ITouchScreenActions>();
-        private readonly InputAction m_TouchScreen_Newaction;
-        public struct TouchScreenActions
+        public PlayerActions @Player => new PlayerActions(this);
+        private int m_KeyboardAndMouseSchemeIndex = -1;
+        public InputControlScheme KeyboardAndMouseScheme
         {
-            private @Controls m_Wrapper;
-            public TouchScreenActions(@Controls wrapper) { m_Wrapper = wrapper; }
-            public InputAction @Newaction => m_Wrapper.m_TouchScreen_Newaction;
-            public InputActionMap Get() { return m_Wrapper.m_TouchScreen; }
-            public void Enable() { Get().Enable(); }
-            public void Disable() { Get().Disable(); }
-            public bool enabled => Get().enabled;
-            public static implicit operator InputActionMap(TouchScreenActions set) { return set.Get(); }
-            public void AddCallbacks(ITouchScreenActions instance)
+            get
             {
-                if (instance == null || m_Wrapper.m_TouchScreenActionsCallbackInterfaces.Contains(instance)) return;
-                m_Wrapper.m_TouchScreenActionsCallbackInterfaces.Add(instance);
-                @Newaction.started += instance.OnNewaction;
-                @Newaction.performed += instance.OnNewaction;
-                @Newaction.canceled += instance.OnNewaction;
-            }
-
-            private void UnregisterCallbacks(ITouchScreenActions instance)
-            {
-                @Newaction.started -= instance.OnNewaction;
-                @Newaction.performed -= instance.OnNewaction;
-                @Newaction.canceled -= instance.OnNewaction;
-            }
-
-            public void RemoveCallbacks(ITouchScreenActions instance)
-            {
-                if (m_Wrapper.m_TouchScreenActionsCallbackInterfaces.Remove(instance))
-                    UnregisterCallbacks(instance);
-            }
-
-            public void SetCallbacks(ITouchScreenActions instance)
-            {
-                foreach (var item in m_Wrapper.m_TouchScreenActionsCallbackInterfaces)
-                    UnregisterCallbacks(item);
-                m_Wrapper.m_TouchScreenActionsCallbackInterfaces.Clear();
-                AddCallbacks(instance);
+                if (m_KeyboardAndMouseSchemeIndex == -1) m_KeyboardAndMouseSchemeIndex = asset.FindControlSchemeIndex("KeyboardAndMouse");
+                return asset.controlSchemes[m_KeyboardAndMouseSchemeIndex];
             }
         }
-        public TouchScreenActions @TouchScreen => new TouchScreenActions(this);
-        public interface IMouseAndKeyboardActions
+        private int m_TouchScreenSchemeIndex = -1;
+        public InputControlScheme TouchScreenScheme
         {
-            void OnNewaction(InputAction.CallbackContext context);
+            get
+            {
+                if (m_TouchScreenSchemeIndex == -1) m_TouchScreenSchemeIndex = asset.FindControlSchemeIndex("TouchScreen");
+                return asset.controlSchemes[m_TouchScreenSchemeIndex];
+            }
         }
-        public interface ITouchScreenActions
+        public interface IPlayerActions
         {
-            void OnNewaction(InputAction.CallbackContext context);
+            void OnMove(InputAction.CallbackContext context);
+            void OnAim(InputAction.CallbackContext context);
+            void OnAttack(InputAction.CallbackContext context);
+            void OnReload(InputAction.CallbackContext context);
+            void OnChangeWeapon(InputAction.CallbackContext context);
         }
     }
 }
