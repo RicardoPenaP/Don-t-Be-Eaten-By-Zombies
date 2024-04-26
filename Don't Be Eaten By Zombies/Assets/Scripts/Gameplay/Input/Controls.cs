@@ -49,10 +49,10 @@ namespace Gameplay.Input
                 },
                 {
                     ""name"": ""Attack"",
-                    ""type"": ""Button"",
+                    ""type"": ""PassThrough"",
                     ""id"": ""a1205b02-7d8b-4a8c-a13b-ed28bd152d5d"",
-                    ""expectedControlType"": ""Button"",
-                    ""processors"": """",
+                    ""expectedControlType"": """",
+                    ""processors"": ""AxisDeadzone(min=0.5,max=1)"",
                     ""interactions"": """",
                     ""initialStateCheck"": false
                 },
@@ -270,6 +270,17 @@ namespace Gameplay.Input
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""KeyboardAndMouse"",
+                    ""action"": ""Attack"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""885ab7fc-cacf-4555-855c-b6f23a39fbe9"",
+                    ""path"": ""<Gamepad>/rightStick"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""TouchScreen"",
                     ""action"": ""Attack"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false

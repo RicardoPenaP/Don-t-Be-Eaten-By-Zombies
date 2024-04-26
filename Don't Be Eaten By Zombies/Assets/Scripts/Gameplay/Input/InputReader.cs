@@ -8,11 +8,6 @@ namespace Gameplay.Input
     [CreateAssetMenu(menuName = "Gameplay/Input/Input Reader", fileName = "NewInputReader")]
     public class InputReader : ScriptableObject, IPlayerActions
     {
-        [Header("Input Reader")]
-        [Header("Settings")]
-        [SerializeField] private bool attackWithAimStick = true;
-        [SerializeField, Range(0f, 1f)] private float aimDeathzoneForAttack;
-
         public event Action<Vector2> OnAimInputUpdated;
         public event Action<bool> OnAttackInputUpdated;
         public event Action OnChangeWeaponInputUpdated;
