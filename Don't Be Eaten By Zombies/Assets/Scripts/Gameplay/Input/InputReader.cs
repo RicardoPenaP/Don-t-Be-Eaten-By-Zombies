@@ -21,6 +21,9 @@ namespace Gameplay.Input
 
         private Controls controls;
 
+        private Vector2 aimRawInput;
+        public Vector2 AimRawInput => aimRawInput;
+
         private void OnEnable()
         {
             Init();
@@ -39,14 +42,8 @@ namespace Gameplay.Input
 
         public void OnAim(InputAction.CallbackContext context)
         {
-            Vector2 aimRawInput = context.ReadValue<Vector2>();
+            aimRawInput = context.ReadValue<Vector2>();
             OnAimInputUpdated?.Invoke(aimRawInput);
-
-            if (!attackWithAimStick)
-            {
-                return;
-            }
-            OnAttackInputUpdated?.Invoke(aimRawInput.magnitude >= aimDeathzoneForAttack);            
         }
 
         public void OnAttack(InputAction.CallbackContext context)
