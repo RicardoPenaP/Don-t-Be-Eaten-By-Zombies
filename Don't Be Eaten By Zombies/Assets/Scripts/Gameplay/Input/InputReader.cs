@@ -1,11 +1,9 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-namespace Gameplay.InputReader
+namespace Gameplay.Input
 {
     [CreateAssetMenu(menuName = "Gameplay/Input/Input Reader", fileName = "NewInputHandler")]
-    public class InputHandler : ScriptableObject
+    public class InputReader : ScriptableObject
     {
         // Start is called before the first frame update
         void Start()
