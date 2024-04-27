@@ -18,7 +18,7 @@ namespace Gameplay.Entities.Common.Movement
         private void Init()
         {
             movementView.OnMoveInputDetected += MovementView_OnMoveInputDetected;
-        }       
+        }
 
         private void Deinit()
         {
@@ -32,7 +32,14 @@ namespace Gameplay.Entities.Common.Movement
 
         private void MovementView_OnMoveInputDetected(Vector2 rawMovementInput)
         {
-            movementModel.MoveTowards(rawMovementInput.normalized);
+            if (rawMovementInput.Equals(Vector2.zero))
+            {
+                movementModel.StopMovement();
+            }
+            else
+            {
+                movementModel.MoveTowards(rawMovementInput.normalized);
+            }
         }
     }
 }
