@@ -31,7 +31,7 @@ namespace Gameplay.Entities.Common.Movement
         }
 
         private void MovementView_OnMoveInputDetected(Vector2 rawMovementInput)
-        {
+        {            
             if (rawMovementInput.Equals(Vector2.zero))
             {
                 movementModel.StopMovement();

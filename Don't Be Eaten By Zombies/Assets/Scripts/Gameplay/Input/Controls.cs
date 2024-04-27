@@ -79,9 +79,9 @@ namespace Gameplay.Input
                 {
                     ""name"": ""LStick"",
                     ""id"": ""e3b78c3a-51a2-4513-9530-4ae40cad1069"",
-                    ""path"": ""2DVector"",
+                    ""path"": ""2DVector(mode=2)"",
                     ""interactions"": """",
-                    ""processors"": """",
+                    ""processors"": ""StickDeadzone"",
                     ""groups"": """",
                     ""action"": ""Move"",
                     ""isComposite"": true,
@@ -112,7 +112,7 @@ namespace Gameplay.Input
                 {
                     ""name"": ""left"",
                     ""id"": ""74d39165-40c9-48ba-ae00-67fdd454c43c"",
-                    ""path"": ""<Gamepad>/rightStick/left"",
+                    ""path"": ""<Gamepad>/leftStick/left"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""TouchScreen"",
@@ -189,7 +189,7 @@ namespace Gameplay.Input
                 {
                     ""name"": ""RStick"",
                     ""id"": ""4958b7d9-9ac5-4541-9d5d-83f59d164f91"",
-                    ""path"": ""2DVector"",
+                    ""path"": ""2DVector(mode=2)"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
