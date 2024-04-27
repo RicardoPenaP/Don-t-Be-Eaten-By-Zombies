@@ -1,21 +1,26 @@
-﻿using System.Collections;
+﻿using Gameplay.Entities.Common.Movement;
+using Gameplay.Input;
+using System;
 using UnityEngine;
 
 namespace Gameplay.Entities.Player
 {
-    public class PlayerView : MonoBehaviour
+    public class PlayerView : MonoBehaviour, IMovementView
     {
+        [Header("Player View")]
+        [Header("References")]
+        [SerializeField] private InputReader inputReader;
 
-        // Use this for initialization
-        void Start()
+        public event Action<Vector2> OnMoveInputDetected;
+
+        private void Awake()
         {
-
+            inputReader.OnMoveInputUpdated += InputReader_OnMoveInputUpdated;
         }
 
-        // Update is called once per frame
-        void Update()
+        private void InputReader_OnMoveInputUpdated(Vector2 rawMovementInput)
         {
-
+            OnMoveInputDetected?.Invoke(rawMovementInput);
         }
     }
 }

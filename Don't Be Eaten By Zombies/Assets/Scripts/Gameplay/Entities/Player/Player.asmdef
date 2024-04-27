@@ -1,7 +1,10 @@
 {
     "name": "Player",
     "rootNamespace": "Gameplay.Entities.Player",
-    "references": [],
+    "references": [
+        "GUID:c821cf740f4c38544aa318cc134ea754",
+        "GUID:8e1da34efc2ac1d46916c53e1d528930"
+    ],
     "includePlatforms": [],
     "excludePlatforms": [],
     "allowUnsafeCode": false,
