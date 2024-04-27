@@ -18,6 +18,12 @@ namespace Gameplay.Entities.Player
             inputReader.OnMoveInputUpdated += InputReader_OnMoveInputUpdated;
         }
 
+        private void OnDestroy()
+        {
+            inputReader.OnMoveInputUpdated -= InputReader_OnMoveInputUpdated;
+        }
+
+
         private void InputReader_OnMoveInputUpdated(Vector2 rawMovementInput)
         {
             OnMoveInputDetected?.Invoke(rawMovementInput);
