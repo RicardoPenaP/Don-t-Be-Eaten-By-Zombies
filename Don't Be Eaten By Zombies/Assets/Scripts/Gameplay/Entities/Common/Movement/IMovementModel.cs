@@ -5,5 +5,6 @@ namespace Gameplay.Entities.Common.Movement
     public interface IMovementModel 
     {
         public void MoveTowards(Vector2 movementDirection);
+        public void StopMovement();
     }
 }
