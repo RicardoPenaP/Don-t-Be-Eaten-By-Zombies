@@ -1,21 +1,17 @@
-﻿using System.Collections;
+﻿using Gameplay.Entities.Common.Movement;
 using UnityEngine;
 
 namespace Gameplay.Entities.Player
 {
-    public class PlayerModel : MonoBehaviour
+    public class PlayerModel : MonoBehaviour, IMovementModel
     {
+        [Header("Player Model")]
+        [Header("References")]
+        [SerializeField] private Rigidbody2D playerRigidbody2D;
 
-        // Use this for initialization
-        void Start()
+        public void MoveTowards(Vector2 movementDirection)
         {
-
-        }
-
-        // Update is called once per frame
-        void Update()
-        {
-
+            throw new System.NotImplementedException();
         }
     }
 }
