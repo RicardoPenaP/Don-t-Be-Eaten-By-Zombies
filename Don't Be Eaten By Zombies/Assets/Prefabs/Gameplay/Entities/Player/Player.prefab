@@ -207,7 +207,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerRigidbody2D: {fileID: 5326615636802955320}
-  movementSettings: {fileID: 0}
+  movementSettings: {fileID: 11400000, guid: a4168b8a8a9269a43bdd2553041e7658, type: 2}
 --- !u!1 &7654749093148518740
 GameObject:
   m_ObjectHideFlags: 0
