@@ -6,16 +6,11 @@ namespace Gameplay.Entities.Player
 {
     public class PlayerController : MonoBehaviour
     {
-        // Start is called before the first frame update
-        void Start()
-        {
-        
-        }
+        [Header("Player Controller")]
+        [Header("References")]
+        [SerializeField] private PlayerView playerView;
+        [SerializeField] private PlayerModel playerModel;
 
-        // Update is called once per frame
-        void Update()
-        {
-        
-        }
+
     }
 }
