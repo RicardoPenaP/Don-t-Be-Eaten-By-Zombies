@@ -125,6 +125,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8635552829240858806}
+  - component: {fileID: 4491979728503847861}
   m_Layer: 0
   m_Name: View
   m_TagString: Untagged
@@ -148,6 +149,19 @@ Transform:
   - {fileID: 3471215018218831707}
   m_Father: {fileID: 1957417923160371888}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4491979728503847861
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6444408887273084319}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1686fa954b3fdfa49b7279619f7b8040, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inputReader: {fileID: 11400000, guid: 39ca8bcd9ee3ec748a063528dc4cb45b, type: 2}
 --- !u!1 &7612556086961309012
 GameObject:
   m_ObjectHideFlags: 0
@@ -157,6 +171,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6443196442120374336}
+  - component: {fileID: 3183506061873631993}
   m_Layer: 0
   m_Name: Model
   m_TagString: Untagged
@@ -179,6 +194,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1957417923160371888}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3183506061873631993
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7612556086961309012}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 346f0e7b26d83bd48b7ca649f20ba92a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerRigidbody2D: {fileID: 5326615636802955320}
+  movementSettings: {fileID: 0}
 --- !u!1 &7654749093148518740
 GameObject:
   m_ObjectHideFlags: 0
@@ -188,6 +217,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3630491246559918915}
+  - component: {fileID: 2914442836752457557}
   m_Layer: 0
   m_Name: Controller
   m_TagString: Untagged
@@ -210,6 +240,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1957417923160371888}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2914442836752457557
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7654749093148518740}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0392a5ff1b8f3a44fa7d52d6dbff2227, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerView: {fileID: 4491979728503847861}
+  playerModel: {fileID: 3183506061873631993}
 --- !u!1 &8746902219148201951
 GameObject:
   m_ObjectHideFlags: 0
@@ -219,6 +263,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1957417923160371888}
+  - component: {fileID: 5326615636802955320}
+  - component: {fileID: 3097785229282424766}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -244,3 +290,65 @@ Transform:
   - {fileID: 6443196442120374336}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!50 &5326615636802955320
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8746902219148201951}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 1
+  m_SleepingMode: 0
+  m_CollisionDetection: 1
+  m_Constraints: 4
+--- !u!58 &3097785229282424766
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8746902219148201951}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.3
