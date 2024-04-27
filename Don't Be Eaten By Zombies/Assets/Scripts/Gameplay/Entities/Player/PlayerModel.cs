@@ -13,5 +13,10 @@ namespace Gameplay.Entities.Player
         {
             throw new System.NotImplementedException();
         }
+
+        public void StopMovement()
+        {
+            playerRigidbody2D.velocity = Vector2.zero;
+        }
     }
 }
