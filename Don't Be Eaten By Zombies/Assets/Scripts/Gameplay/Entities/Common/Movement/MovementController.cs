@@ -32,7 +32,7 @@ namespace Gameplay.Entities.Common.Movement
 
         private void MovementView_OnMoveInputDetected(Vector2 rawMovementInput)
         {
-            //Update movement model
+            movementModel.MoveTowards(rawMovementInput.normalized);
         }
     }
 }
