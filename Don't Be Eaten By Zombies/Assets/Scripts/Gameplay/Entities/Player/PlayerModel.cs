@@ -1,6 +1,7 @@
 ﻿using Gameplay.Entities.Common.Aim;
 using Gameplay.Entities.Common.Health;
 using Gameplay.Entities.Common.Movement;
+using System;
 using UnityEngine;
 
 namespace Gameplay.Entities.Player
@@ -15,6 +16,14 @@ namespace Gameplay.Entities.Player
 
         [Header("Settings")]
         [SerializeField] private MovementSettings movementSettings;
+
+        public event Action<int> OnHealthModified;
+        public event Action OnHealthReachedZero;
+
+        private int currentMaxHealth = 0;
+        private int currentHealth = 0;
+        private bool isAlive = true;
+
 
         //Movement
         public void MoveTowards(Vector2 movementDirection)
@@ -34,5 +43,32 @@ namespace Gameplay.Entities.Player
             playerTransform.right = aimDirection;
         }
 
+        //Health
+        public void ReduceHealth(int amount)
+        {
+            ModifyHealth(Mathf.Abs(amount));
+        }
+
+        public void RestoreHealth(int amount)
+        {
+            ModifyHealth(-Mathf.Abs(amount));
+        }
+
+        private void ModifyHealth(int amount)
+        {
+            if (!isAlive)
+            {
+                return;
+            }
+
+            currentHealth = Mathf.Clamp(currentHealth + amount, 0, currentMaxHealth);
+            OnHealthModified?.Invoke(currentHealth);
+
+            if (currentHealth == 0)
+            {
+                isAlive = false;
+                OnHealthReachedZero?.Invoke();
+            }
+        }
     }
 }
