@@ -13,20 +13,29 @@ namespace Gameplay.Entities.Player
         [SerializeField] private InputReader inputReader;
 
         public event Action<Vector2> OnMoveInputDetected;
+        public event Action<Vector2> OnAimInputDetected;
 
         private void Awake()
         {
             inputReader.OnMoveInputUpdated += InputReader_OnMoveInputUpdated;
+            inputReader.OnAimInputUpdated += InputReader_OnAimInputUpdated;
         }
 
         private void OnDestroy()
         {
             inputReader.OnMoveInputUpdated -= InputReader_OnMoveInputUpdated;
+            inputReader.OnAimInputUpdated += InputReader_OnAimInputUpdated;
         }
 
         private void InputReader_OnMoveInputUpdated(Vector2 rawMovementInput)
         {
             OnMoveInputDetected?.Invoke(rawMovementInput);
         }
+
+        private void InputReader_OnAimInputUpdated(Vector2 rawAimInput)
+        {
+            OnAimInputDetected?.Invoke(rawAimInput);
+        }
+
     }
 }
