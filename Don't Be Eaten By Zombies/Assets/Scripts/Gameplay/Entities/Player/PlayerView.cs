@@ -38,5 +38,10 @@ namespace Gameplay.Entities.Player
             OnAimInputDetected?.Invoke(rawAimInput);
         }
 
+        //Health
+        public void UpdateHealthBar(float normalizedCurrentHealth)
+        {
+            
+        }
     }
 }
