@@ -126,7 +126,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5381012203205569659}
   m_Layer: 0
-  m_Name: HealthBar
+  m_Name: FilledBar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
