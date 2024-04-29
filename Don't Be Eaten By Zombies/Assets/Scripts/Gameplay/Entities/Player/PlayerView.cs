@@ -1,11 +1,12 @@
-﻿using Gameplay.Entities.Common.Movement;
+﻿using Gameplay.Entities.Common.Aim;
+using Gameplay.Entities.Common.Movement;
 using Gameplay.Input;
 using System;
 using UnityEngine;
 
 namespace Gameplay.Entities.Player
 {
-    public class PlayerView : MonoBehaviour, IMovementView
+    public class PlayerView : MonoBehaviour, IMovementView, IAimView
     {
         [Header("Player View")]
         [Header("References")]
