@@ -345,7 +345,7 @@ GameObject:
   - component: {fileID: 7261945865405733448}
   - component: {fileID: 5538603561157204780}
   m_Layer: 0
-  m_Name: BackgroundFloor
+  m_Name: BackgroundFloorTilePalette
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
