@@ -16,6 +16,7 @@ namespace Gameplay.Entities.Player
 
         [Header("Settings")]
         [SerializeField] private MovementSettings movementSettings;
+        [SerializeField] private HealthSettings healthSettings;
 
         public event Action<int> OnHealthModified;
         public event Action OnHealthReachedZero;
@@ -24,6 +25,11 @@ namespace Gameplay.Entities.Player
         private int currentHealth = 0;
         private bool isAlive = true;
 
+        private void Awake()
+        {
+            currentMaxHealth = healthSettings.DefaulMaxHealth;
+            ModifyHealth(currentMaxHealth);
+        }
 
         //Movement
         public void MoveTowards(Vector2 movementDirection)

@@ -285,6 +285,7 @@ MonoBehaviour:
   playerRigidbody2D: {fileID: 5326615636802955320}
   playerTransform: {fileID: 1650136493769571630}
   movementSettings: {fileID: 11400000, guid: a4168b8a8a9269a43bdd2553041e7658, type: 2}
+  healthSettings: {fileID: 11400000, guid: b2f3ae8daab0abf43acb1c1e483347fe, type: 2}
 --- !u!1 &7654749093148518740
 GameObject:
   m_ObjectHideFlags: 0
