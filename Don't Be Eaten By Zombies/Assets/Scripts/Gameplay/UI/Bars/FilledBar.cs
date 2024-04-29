@@ -1,21 +1,17 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
-namespace Gameplay.UI
+namespace Gameplay.UI.Bars
 {
     public class FilledBar : MonoBehaviour
     {
-        // Start is called before the first frame update
-        void Start()
-        {
-        
-        }
+        [Header("Filled Bar")]
+        [Header("References")]
+        [SerializeField] private Image fill;
 
-        // Update is called once per frame
-        void Update()
+        public void UpdateFill(float fillAmount)
         {
-        
+            fill.fillAmount = fillAmount;
         }
     }
 }
