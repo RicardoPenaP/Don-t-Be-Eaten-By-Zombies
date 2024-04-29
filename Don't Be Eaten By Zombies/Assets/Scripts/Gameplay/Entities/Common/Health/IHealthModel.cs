@@ -9,5 +9,6 @@ namespace Gameplay.Entities.Common.Health
 
         public void ReduceHealth(int amount);
         public void RestoreHealth(int amount);
+        public float GetNormalicedCurrentHealth();
     }
 }
