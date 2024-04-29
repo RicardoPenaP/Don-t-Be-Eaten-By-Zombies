@@ -1,4 +1,5 @@
 using System;
+using UnityEngine;
 
 namespace Gameplay.Entities.Common.Aim
 {
@@ -16,17 +17,27 @@ namespace Gameplay.Entities.Common.Aim
 
         private void Init()
         {
-
+            aimView.OnAimInputDetected += AimView_OnAimInputDetected;
         }
 
         private void Deinit()
         {
-
+            aimView.OnAimInputDetected -= AimView_OnAimInputDetected;
         }
 
         public void Dispose()
         {
             Deinit();
         }
+
+        private void AimView_OnAimInputDetected(Vector2 rawAimInput)
+        {
+            if (rawAimInput.Equals(Vector2.zero))
+            {
+                return;
+            }
+            aimModel.AimTowards(rawAimInput.normalized);
+        }
+
     }
 }
