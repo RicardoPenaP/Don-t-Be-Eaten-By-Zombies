@@ -16,17 +16,29 @@ namespace Gameplay.Entities.Common.Health
 
         private void Init()
         {
-
+            healthModel.OnHealthModified += HealthModel_OnHealthModified;
+            healthModel.OnHealthReachedZero += HealthModel_OnHealthReachedZero;
         }
 
         private void Deinit()
         {
-
+            healthModel.OnHealthModified -= HealthModel_OnHealthModified;
+            healthModel.OnHealthReachedZero -= HealthModel_OnHealthReachedZero;
         }
 
         public void Dispose()
         {
             Deinit();
+        }
+
+        private void HealthModel_OnHealthModified(int currentHealth)
+        {
+            
+        }
+
+        private void HealthModel_OnHealthReachedZero()
+        {
+            
         }
     }
 }
