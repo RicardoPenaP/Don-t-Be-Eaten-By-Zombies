@@ -1,9 +1,10 @@
-﻿using Gameplay.Entities.Common.Movement;
+﻿using Gameplay.Entities.Common.Aim;
+using Gameplay.Entities.Common.Movement;
 using UnityEngine;
 
 namespace Gameplay.Entities.Player
 {
-    public class PlayerModel : MonoBehaviour, IMovementModel
+    public class PlayerModel : MonoBehaviour, IMovementModel, IAimModel
     {
         [Header("Player Model")]
 
