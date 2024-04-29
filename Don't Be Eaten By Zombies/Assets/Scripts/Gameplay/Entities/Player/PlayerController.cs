@@ -1,3 +1,4 @@
+using Gameplay.Entities.Common.Aim;
 using Gameplay.Entities.Common.Movement;
 using System.Collections;
 using System.Collections.Generic;
@@ -13,10 +14,12 @@ namespace Gameplay.Entities.Player
         [SerializeField] private PlayerModel playerModel;
 
         private MovementController movementController;
+        private AimController aimController;
 
         private void Awake()
         {
             movementController = new MovementController(playerView, playerModel);
+            //
         }
 
         private void OnDestroy()
