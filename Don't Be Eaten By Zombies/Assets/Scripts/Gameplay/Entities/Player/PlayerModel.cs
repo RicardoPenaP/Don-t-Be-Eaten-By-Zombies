@@ -10,10 +10,12 @@ namespace Gameplay.Entities.Player
 
         [Header("References")]
         [SerializeField] private Rigidbody2D playerRigidbody2D;
+        [SerializeField] private Transform playerTransform;
 
         [Header("Settings")]
         [SerializeField] private MovementSettings movementSettings;
 
+        //Movement
         public void MoveTowards(Vector2 movementDirection)
         {
             //Only use forward speed for testing
@@ -24,5 +26,12 @@ namespace Gameplay.Entities.Player
         {
             playerRigidbody2D.velocity = Vector2.zero;
         }
+
+        //Aiming
+        public void AimTowards(Vector2 aimDirection)
+        {
+            playerTransform.right = aimDirection;
+        }
+
     }
 }
