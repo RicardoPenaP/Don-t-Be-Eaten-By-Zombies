@@ -1,7 +1,9 @@
 {
     "name": "Common",
     "rootNamespace": "Gameplay.Entities.Common",
-    "references": [],
+    "references": [
+        "GUID:64aba675f3d9620498a1dd60b40f70df"
+    ],
     "includePlatforms": [],
     "excludePlatforms": [],
     "allowUnsafeCode": false,
