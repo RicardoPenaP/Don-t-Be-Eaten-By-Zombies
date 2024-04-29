@@ -19,12 +19,13 @@ namespace Gameplay.Entities.Player
         private void Awake()
         {
             movementController = new MovementController(playerView, playerModel);
-            //
+            aimController = new AimController(playerView, playerModel);
         }
 
         private void OnDestroy()
         {
             movementController.Dispose();
+            aimController.Dispose();
         }
     }
 }
