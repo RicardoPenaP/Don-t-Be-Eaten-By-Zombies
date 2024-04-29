@@ -12,6 +12,7 @@ namespace Gameplay.Entities.Player
         [Header("Player View")]
         [Header("References")]
         [SerializeField] private InputReader inputReader;
+        [SerializeField] private HealthCanvas healthCanvas;
 
         public event Action<Vector2> OnMoveInputDetected;
         public event Action<Vector2> OnAimInputDetected;
@@ -41,7 +42,7 @@ namespace Gameplay.Entities.Player
         //Health
         public void UpdateHealthBar(float normalizedCurrentHealth)
         {
-            
+            healthCanvas.UpdateHealthBar(normalizedCurrentHealth);
         }
     }
 }

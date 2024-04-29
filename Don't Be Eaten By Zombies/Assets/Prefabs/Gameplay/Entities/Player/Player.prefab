@@ -126,6 +126,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7857772596758163247}
   - component: {fileID: 4310110415552687410}
+  - component: {fileID: 8100047528939457685}
   m_Layer: 0
   m_Name: HealthCanvas
   m_TagString: Untagged
@@ -176,6 +177,19 @@ Canvas:
   m_SortingLayerID: -1840974179
   m_SortingOrder: 0
   m_TargetDisplay: 0
+--- !u!114 &8100047528939457685
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2935806993267661046}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae5ead4246d770343bb2200699127ec2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  healthBar: {fileID: 7530455067746917687}
 --- !u!1 &6444408887273084319
 GameObject:
   m_ObjectHideFlags: 0
@@ -223,6 +237,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inputReader: {fileID: 11400000, guid: 39ca8bcd9ee3ec748a063528dc4cb45b, type: 2}
+  healthCanvas: {fileID: 8100047528939457685}
 --- !u!1 &7612556086961309012
 GameObject:
   m_ObjectHideFlags: 0
@@ -516,3 +531,14 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 6274454438774845921, guid: 449665ce35d85494c8e03d995bc3ddb6, type: 3}
   m_PrefabInstance: {fileID: 2143261554597961114}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &7530455067746917687 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8448728690896421037, guid: 449665ce35d85494c8e03d995bc3ddb6, type: 3}
+  m_PrefabInstance: {fileID: 2143261554597961114}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7443aaa78ad102d4d9aed3a1528f569a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
