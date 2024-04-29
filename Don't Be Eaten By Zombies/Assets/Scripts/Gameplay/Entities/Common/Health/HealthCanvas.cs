@@ -1,3 +1,4 @@
+using Gameplay.UI.Bars;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -6,16 +7,13 @@ namespace Gameplay.Entities.Common
 {
     public class HealthCanvas : MonoBehaviour
     {
-        // Start is called before the first frame update
-        void Start()
-        {
-        
-        }
+        [Header("Health Canvas")]
+        [Header("References")]
+        [SerializeField] private FilledBar healthBar;
 
-        // Update is called once per frame
-        void Update()
+        public void UpdateHealthBar(float healthAmount)
         {
-        
+            healthBar.UpdateFill(healthAmount);
         }
     }
 }
