@@ -70,5 +70,10 @@ namespace Gameplay.Entities.Player
                 OnHealthReachedZero?.Invoke();
             }
         }
+
+        public float GetNormalicedCurrentHealth()
+        {
+            return (float)currentHealth / currentMaxHealth;
+        }
     }
 }
