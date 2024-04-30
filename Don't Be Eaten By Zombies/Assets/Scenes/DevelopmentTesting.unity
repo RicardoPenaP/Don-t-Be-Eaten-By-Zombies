@@ -1282,7 +1282,7 @@ TilemapRenderer:
   m_SortingLayer: 1
   m_SortingOrder: 0
   m_ChunkSize: {x: 32, y: 32, z: 32}
-  m_ChunkCullingBounds: {x: 0.016129017, y: 0.016129017, z: 0}
+  m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
   m_MaxChunkCount: 16
   m_MaxFrameAge: 16
   m_SortOrder: 0
@@ -24989,19 +24989,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3711489718870078663, guid: 63e4be52cb110f840a0226f149b51e0c, type: 3}
       propertyPath: m_ChunkCullingBounds.x
-      value: 0.016129017
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3711489718870078663, guid: 63e4be52cb110f840a0226f149b51e0c, type: 3}
       propertyPath: m_ChunkCullingBounds.y
-      value: 0.016129017
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3718157055883361701, guid: 63e4be52cb110f840a0226f149b51e0c, type: 3}
       propertyPath: m_ChunkCullingBounds.x
-      value: 0.016129017
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3718157055883361701, guid: 63e4be52cb110f840a0226f149b51e0c, type: 3}
       propertyPath: m_ChunkCullingBounds.y
-      value: 0.016129017
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6423532433163485256, guid: 63e4be52cb110f840a0226f149b51e0c, type: 3}
       propertyPath: m_CompositePaths.m_Paths.Array.data[0].Array.data[0].x
@@ -25850,19 +25850,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7344705272403500241, guid: 068cecf75eab74144a916ebd3bf2f330, type: 3}
       propertyPath: m_ChunkCullingBounds.x
-      value: 0.016129017
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7344705272403500241, guid: 068cecf75eab74144a916ebd3bf2f330, type: 3}
       propertyPath: m_ChunkCullingBounds.y
-      value: 0.016129017
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7347045070270715315, guid: 068cecf75eab74144a916ebd3bf2f330, type: 3}
       propertyPath: m_ChunkCullingBounds.x
-      value: 0.016129017
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7347045070270715315, guid: 068cecf75eab74144a916ebd3bf2f330, type: 3}
       propertyPath: m_ChunkCullingBounds.y
-      value: 0.016129017
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8564566400649822411, guid: 068cecf75eab74144a916ebd3bf2f330, type: 3}
       propertyPath: m_LocalPosition.x
