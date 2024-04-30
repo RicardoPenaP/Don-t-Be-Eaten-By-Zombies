@@ -50,6 +50,12 @@ TagManager:
   - name: Entities
     uniqueID: 2453993117
     locked: 0
+  - name: Bullets
+    uniqueID: 2763894483
+    locked: 0
+  - name: Weapons
+    uniqueID: 1892515535
+    locked: 0
   - name: BuildingRooftops
     uniqueID: 2816090299
     locked: 0
