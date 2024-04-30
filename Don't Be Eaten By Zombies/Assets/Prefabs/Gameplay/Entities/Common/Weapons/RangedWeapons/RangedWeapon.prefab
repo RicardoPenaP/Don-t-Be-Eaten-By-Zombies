@@ -137,6 +137,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e2ac7d1b0777a6a4ea1bcf5cea0a282f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rangedWeaponView: {fileID: 7843095387355844555}
+  rangedWeaponModel: {fileID: 8688581866383286451}
 --- !u!1 &6026219908982441165 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4386923620893348200, guid: b619d1b9fc9c53b4fa0a1371890853b4, type: 3}
