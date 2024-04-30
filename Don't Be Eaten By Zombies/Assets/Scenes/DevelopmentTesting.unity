@@ -1016,19 +1016,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6512835099278081152, guid: 7a4592ec95119b54bb42a0682aa60d0f, type: 3}
       propertyPath: m_ChunkCullingBounds.x
-      value: 0.016129017
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6512835099278081152, guid: 7a4592ec95119b54bb42a0682aa60d0f, type: 3}
       propertyPath: m_ChunkCullingBounds.y
-      value: 0.016129017
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6519643379794687458, guid: 7a4592ec95119b54bb42a0682aa60d0f, type: 3}
       propertyPath: m_ChunkCullingBounds.x
-      value: 0.016129017
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6519643379794687458, guid: 7a4592ec95119b54bb42a0682aa60d0f, type: 3}
       propertyPath: m_ChunkCullingBounds.y
-      value: 0.016129017
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -23943,19 +23943,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3711489718870078663, guid: 63e4be52cb110f840a0226f149b51e0c, type: 3}
       propertyPath: m_ChunkCullingBounds.x
-      value: 0.016129017
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3711489718870078663, guid: 63e4be52cb110f840a0226f149b51e0c, type: 3}
       propertyPath: m_ChunkCullingBounds.y
-      value: 0.016129017
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3718157055883361701, guid: 63e4be52cb110f840a0226f149b51e0c, type: 3}
       propertyPath: m_ChunkCullingBounds.x
-      value: 0.016129017
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3718157055883361701, guid: 63e4be52cb110f840a0226f149b51e0c, type: 3}
       propertyPath: m_ChunkCullingBounds.y
-      value: 0.016129017
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6423532433163485256, guid: 63e4be52cb110f840a0226f149b51e0c, type: 3}
       propertyPath: m_CompositePaths.m_Paths.Array.data[0].Array.data[0].x
