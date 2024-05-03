@@ -1,9 +1,10 @@
 using Gameplay.Entities.Common.Weapons.Common.Attack;
+using Gameplay.Entities.Common.Weapons.Common.Reload;
 using UnityEngine;
 
 namespace Gameplay.Entities.Common.Weapons.RangedWeapons
 {
-    public class RangedWeaponView : MonoBehaviour, IWeaponAttackView
+    public class RangedWeaponView : MonoBehaviour, IWeaponAttackView, IWeaponReloadView
     {
         public void UpdateAttackFeedback()
         {
