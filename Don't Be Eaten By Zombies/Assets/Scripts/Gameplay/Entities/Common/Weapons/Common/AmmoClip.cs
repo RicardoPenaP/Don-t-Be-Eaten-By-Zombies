@@ -1,9 +1,12 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 
 namespace Gameplay.Entities.Common.Weapons.Common
 {
     public class AmmoClip
     {
+        public event Action OutOfAmmo;
+
         private readonly int maxAmmo;
         private int currentAmmo;
 
@@ -24,11 +27,12 @@ namespace Gameplay.Entities.Common.Weapons.Common
 
         public bool TryTakeAmmo()
         {
+            currentAmmo--;
             if (currentAmmo <= 0)
             {
+                OutOfAmmo?.Invoke();
                 return false;
             }
-            currentAmmo--;
             return true;
         }
     }
