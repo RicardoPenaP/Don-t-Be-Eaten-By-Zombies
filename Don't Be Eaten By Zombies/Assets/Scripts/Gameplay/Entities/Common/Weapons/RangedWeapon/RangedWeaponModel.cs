@@ -7,5 +7,6 @@ namespace Gameplay.Entities.Common.Weapons.RangedWeapons
         [Header("Ranged Weapon Model")]
         [Header("References")]
         [SerializeField] private Transform shootingPosition;
+        [SerializeField] private RangedWeaponSettings weaponSettings;
     }
 }
