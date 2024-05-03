@@ -29,5 +29,10 @@ namespace Gameplay.Entities.Common.Weapons.Common.Reload
             Deinit();
         }
 
+        public void Reload()
+        {
+
+        }
+
     }
 }
