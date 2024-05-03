@@ -25,14 +25,36 @@ namespace Gameplay.Entities.Common.Weapons.RangedWeapons
             Init();
         }
 
+        private void OnDestroy()
+        {
+            Deinit();
+        }
+
         private void Init()
         {
             attackCooldown = 1 / weaponSettings.FireRate;
             ammoClip = new AmmoClip(weaponSettings.ClipSize);
+            ammoClip.OutOfAmmo += AmmoClip_OutOfAmmo;
         }
 
+        private void Deinit()
+        {
+            ammoClip.OutOfAmmo -= AmmoClip_OutOfAmmo;
+        }
+
+        private void AmmoClip_OutOfAmmo()
+        {
+            TryReload();
+        }
+
+        //Attack logic
         public bool TryAttack()
         {
+            if (isReloading)
+            {
+                return false;
+            }
+
             if (!canAttack)
             {
                 return false;
@@ -45,9 +67,16 @@ namespace Gameplay.Entities.Common.Weapons.RangedWeapons
             return true;
         }
 
+        //Reload logic  
         public bool TryReload()
         {
-            return false;
+            if (isReloading)
+            {
+                return false;
+            }
+
+            StartCoroutine(ReloadRoutine());
+            return true;
         }
 
         private IEnumerator AttackCooldownRoutine()
@@ -60,6 +89,20 @@ namespace Gameplay.Entities.Common.Weapons.RangedWeapons
                 yield return null;
             }
             canAttack = true;
+        }
+
+        private IEnumerator ReloadRoutine()
+        {
+            isReloading = true;
+            float timer = 0f;
+            while (timer < weaponSettings.ReloadTime)
+            {
+                timer += Time.deltaTime;
+                yield return null;
+            }
+            //Testing feature, the final product must obtain the ammo from an ammo storage
+            ammoClip.ReloadAmmo(ammoClip.MaxAmmo);
+            isReloading = false;
         }
     }
 }
