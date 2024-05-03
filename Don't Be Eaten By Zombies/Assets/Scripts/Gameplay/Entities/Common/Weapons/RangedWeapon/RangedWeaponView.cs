@@ -9,7 +9,13 @@ namespace Gameplay.Entities.Common.Weapons.RangedWeapons
         public void UpdateAttackFeedback()
         {
             //Trigger VFX and SFX for doing feedback for the player
-            Debug.Log("Weapon VFX and SFX activated");
+            Debug.Log("Attack VFX and SFX activated");
+        }
+
+        public void UpdateReloadFeedback()
+        {
+            //Trigger VFX and SFX for doing feedback for the player
+            Debug.Log("Reload VFX and SFX activated");
         }
     }
 }
