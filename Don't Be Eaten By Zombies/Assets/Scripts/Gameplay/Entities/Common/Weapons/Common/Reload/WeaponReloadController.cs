@@ -31,7 +31,10 @@ namespace Gameplay.Entities.Common.Weapons.Common.Reload
 
         public void Reload()
         {
-
+            if (weaponReloadModel.TryReload())
+            {
+                weaponReloadView.UpdateReloadFeedback();
+            }
         }
 
     }
