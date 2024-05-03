@@ -9,6 +9,16 @@ namespace Gameplay.Entities.Common.Weapons.RangedWeapons
         [SerializeField] private RangedWeaponView rangedWeaponView;
         [SerializeField] private RangedWeaponModel rangedWeaponModel;
 
+        public void Attack()
+        {
 
+        }
+
+        public void Reload()
+        {
+
+        }
+
+        
     }
 }
