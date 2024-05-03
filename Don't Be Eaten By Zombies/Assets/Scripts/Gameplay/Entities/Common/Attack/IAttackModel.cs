@@ -3,5 +3,6 @@
     public interface IAttackModel
     {
         public void Attack();
+        public void Reload();
     }
 }
