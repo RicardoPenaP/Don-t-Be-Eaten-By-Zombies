@@ -33,7 +33,7 @@ namespace Gameplay.Entities.Common.Weapons.Common.Attack
         {
             if (weaponAttackModel.TryAttack())
             {
-                //Activates the VFX and SFX in the view
+                weaponAttackView.UpdateAttackFeedback();
             }
         }
     }
