@@ -2,6 +2,6 @@
 {
     public interface IWeaponReloadView 
     {
-
+        public void UpdateReloadFeedback();
     }
 }
