@@ -16,17 +16,29 @@ namespace Gameplay.Entities.Common.WeaponActions
 
         private void Init()
         {
-            
+            weaponActionsView.OnAttackInputDetected += WeaponActionsView_OnAttackInputDetected;
+            weaponActionsView.OnReloadInputDetected += WeaponActionsView_OnReloadInputDetected;
         }
-
+        
         private void Deinit()
         {
-
+            weaponActionsView.OnAttackInputDetected -= WeaponActionsView_OnAttackInputDetected;
+            weaponActionsView.OnReloadInputDetected -= WeaponActionsView_OnReloadInputDetected;
         }
 
         public void Dispose()
         {
             Deinit();
+        }
+
+        private void WeaponActionsView_OnAttackInputDetected(bool obj)
+        {
+            weaponActionsModel.Attack();
+        }
+
+        private void WeaponActionsView_OnReloadInputDetected()
+        {
+            weaponActionsModel.Reload();
         }
     }
 }
