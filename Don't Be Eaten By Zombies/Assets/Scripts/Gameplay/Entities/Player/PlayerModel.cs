@@ -1,6 +1,7 @@
 ﻿using Gameplay.Entities.Common.Aim;
 using Gameplay.Entities.Common.Health;
 using Gameplay.Entities.Common.Movement;
+using Gameplay.Entities.Common.Weapons;
 using System;
 using UnityEngine;
 
@@ -12,7 +13,7 @@ namespace Gameplay.Entities.Player
 
         [Header("References")]
         [SerializeField] private Rigidbody2D playerRigidbody2D;
-        [SerializeField] private Transform playerTransform;
+        [SerializeField] private Transform bodyTransform;
 
         [Header("Settings")]
         [SerializeField] private MovementSettings movementSettings;
@@ -21,14 +22,30 @@ namespace Gameplay.Entities.Player
         public event Action<int> OnHealthModified;
         public event Action OnHealthReachedZero;
 
+        private IWeaponController currentWeapon;
+
         private int currentMaxHealth = 0;
         private int currentHealth = 0;
         private bool isAlive = true;
 
         private void Awake()
         {
+            Init();
+        }
+
+        private void Init()
+        {
             currentMaxHealth = healthSettings.DefaulMaxHealth;
             ModifyHealth(currentMaxHealth);
+
+            try
+            {
+                currentWeapon = bodyTransform.GetComponentInChildren<IWeaponController>();
+            }
+            catch (Exception e)
+            {
+                Debug.LogError(e);
+            }
         }
 
         //Movement
@@ -46,7 +63,7 @@ namespace Gameplay.Entities.Player
         //Aiming
         public void AimTowards(Vector2 aimDirection)
         {
-            playerTransform.right = aimDirection;
+            bodyTransform.right = aimDirection;
         }
 
         //Health
