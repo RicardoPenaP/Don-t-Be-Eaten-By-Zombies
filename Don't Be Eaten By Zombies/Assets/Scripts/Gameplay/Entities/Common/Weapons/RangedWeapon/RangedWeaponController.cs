@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace Gameplay.Entities.Common.Weapons.RangedWeapons
 {
-    public class RangedWeaponController : MonoBehaviour
+    public class RangedWeaponController : MonoBehaviour, IWeaponController
     {
         [Header("Ranged Weapon Controller")]
         [Header("References")]
