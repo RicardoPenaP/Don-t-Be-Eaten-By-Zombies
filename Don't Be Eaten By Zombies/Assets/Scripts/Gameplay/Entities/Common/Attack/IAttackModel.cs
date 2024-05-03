@@ -1,8 +1,7 @@
 ﻿namespace Gameplay.Entities.Common.Attack
 {
-    public interface IAttackView
+    public interface IAttackModel
     {
 
-        
     }
 }
