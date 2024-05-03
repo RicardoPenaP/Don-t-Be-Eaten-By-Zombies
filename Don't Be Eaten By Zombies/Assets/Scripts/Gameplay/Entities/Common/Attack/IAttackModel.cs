@@ -1,4 +1,4 @@
-﻿namespace Gameplay.Entities.Common.Attack
+﻿namespace Gameplay.Entities.Common.WeaponsActions
 {
     public interface IAttackModel
     {
