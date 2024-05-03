@@ -22,10 +22,7 @@ namespace Gameplay.Entities.Common.Weapons.RangedWeapons
             weaponAttackController.Dispose();
         }
 
-        public void Attack()
-        {
-
-        }
+        public void Attack() => weaponAttackController.Attack();
 
         public void Reload()
         {
