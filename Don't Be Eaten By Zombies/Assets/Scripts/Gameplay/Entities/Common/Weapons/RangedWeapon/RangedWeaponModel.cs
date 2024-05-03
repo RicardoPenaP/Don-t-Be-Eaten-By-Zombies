@@ -60,22 +60,14 @@ namespace Gameplay.Entities.Common.Weapons.RangedWeapons
                 return false;
             }
 
-            //Bullet handling logic
-
-            Debug.Log("Attack successfull");
-            StartCoroutine(AttackCooldownRoutine());
-            return true;
-        }
-
-        //Reload logic  
-        public bool TryReload()
-        {
-            if (isReloading)
+            //Bullet handling logic            
+            if (!ammoClip.TryTakeAmmo())
             {
                 return false;
             }
 
-            StartCoroutine(ReloadRoutine());
+            Debug.Log("Attack successfull");
+            StartCoroutine(AttackCooldownRoutine());
             return true;
         }
 
@@ -89,6 +81,18 @@ namespace Gameplay.Entities.Common.Weapons.RangedWeapons
                 yield return null;
             }
             canAttack = true;
+        }
+
+        //Reload logic  
+        public bool TryReload()
+        {
+            if (isReloading)
+            {
+                return false;
+            }
+
+            StartCoroutine(ReloadRoutine());
+            return true;
         }
 
         private IEnumerator ReloadRoutine()
