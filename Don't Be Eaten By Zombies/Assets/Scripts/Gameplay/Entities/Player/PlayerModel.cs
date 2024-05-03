@@ -1,19 +1,21 @@
 ﻿using Gameplay.Entities.Common.Aim;
 using Gameplay.Entities.Common.Health;
 using Gameplay.Entities.Common.Movement;
+using Gameplay.Entities.Common.WeaponActions;
 using Gameplay.Entities.Common.Weapons;
 using System;
 using UnityEngine;
 
 namespace Gameplay.Entities.Player
 {
-    public class PlayerModel : MonoBehaviour, IMovementModel, IAimModel, IHealthModel
+    public class PlayerModel : MonoBehaviour, IMovementModel, IAimModel, IHealthModel, IWeaponActionsModel
     {
         [Header("Player Model")]
 
         [Header("References")]
         [SerializeField] private Rigidbody2D playerRigidbody2D;
         [SerializeField] private Transform bodyTransform;
+        [SerializeField] private Transform weaponHolderTransform;
 
         [Header("Settings")]
         [SerializeField] private MovementSettings movementSettings;
@@ -40,7 +42,7 @@ namespace Gameplay.Entities.Player
 
             try
             {
-                currentWeapon = bodyTransform.GetComponentInChildren<IWeaponController>();
+                currentWeapon = weaponHolderTransform.GetComponentInChildren<IWeaponController>();
             }
             catch (Exception e)
             {
@@ -97,6 +99,17 @@ namespace Gameplay.Entities.Player
         public float GetNormalicedCurrentHealth()
         {
             return (float)currentHealth / currentMaxHealth;
+        }
+
+        //Weapon Actions
+        public void Attack()
+        {
+            currentWeapon.Attack();
+        }
+
+        public void Reload()
+        {
+            currentWeapon.Reload();
         }
     }
 }
