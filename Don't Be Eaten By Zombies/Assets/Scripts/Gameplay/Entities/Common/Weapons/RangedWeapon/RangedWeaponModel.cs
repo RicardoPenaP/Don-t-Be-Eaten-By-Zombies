@@ -1,10 +1,11 @@
 using Gameplay.Entities.Common.Weapons.Common.Attack;
+using Gameplay.Entities.Common.Weapons.Common.Reload;
 using System.Collections;
 using UnityEngine;
 
 namespace Gameplay.Entities.Common.Weapons.RangedWeapons
 {
-    public class RangedWeaponModel : MonoBehaviour, IWeaponAttackModel
+    public class RangedWeaponModel : MonoBehaviour, IWeaponAttackModel, IWeaponReloadModel
     {
         [Header("Ranged Weapon Model")]
         [Header("References")]
