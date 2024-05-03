@@ -11,7 +11,7 @@ namespace Gameplay.Entities.Common.Weapons.RangedWeapons
 
         public void Attack()
         {
-
+            
         }
 
         public void Reload()
