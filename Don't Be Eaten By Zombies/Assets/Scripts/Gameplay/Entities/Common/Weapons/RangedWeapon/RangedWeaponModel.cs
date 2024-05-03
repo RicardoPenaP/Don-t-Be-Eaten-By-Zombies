@@ -1,3 +1,4 @@
+using Gameplay.Entities.Common.Weapons.Common;
 using Gameplay.Entities.Common.Weapons.Common.Attack;
 using Gameplay.Entities.Common.Weapons.Common.Reload;
 using System.Collections;
@@ -12,6 +13,8 @@ namespace Gameplay.Entities.Common.Weapons.RangedWeapons
         [SerializeField] private Transform shootingPosition;
         [SerializeField] private RangedWeaponSettings weaponSettings;
 
+        private AmmoClip ammoClip;
+
         private float attackCooldown;
         private bool canAttack = true;
         private bool isReloading = false;
@@ -25,6 +28,7 @@ namespace Gameplay.Entities.Common.Weapons.RangedWeapons
         private void Init()
         {
             attackCooldown = 1 / weaponSettings.FireRate;
+            ammoClip = new AmmoClip(weaponSettings.ClipSize);
         }
 
         public bool TryAttack()
