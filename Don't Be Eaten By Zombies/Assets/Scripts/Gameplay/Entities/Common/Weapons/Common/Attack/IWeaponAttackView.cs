@@ -2,6 +2,6 @@
 {
     public interface IWeaponAttackView 
     {
-
+        public void UpdateAttackFeedback();
     }
 }
