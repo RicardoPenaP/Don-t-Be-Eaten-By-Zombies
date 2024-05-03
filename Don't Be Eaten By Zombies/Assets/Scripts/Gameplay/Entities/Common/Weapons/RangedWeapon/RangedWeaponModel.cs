@@ -67,6 +67,7 @@ namespace Gameplay.Entities.Common.Weapons.RangedWeapons
             }
 
             Debug.Log("Attack successfull");
+            Debug.Log($"{ammoClip.CurrentAmmo} ammo left");
             StartCoroutine(AttackCooldownRoutine());
             return true;
         }
@@ -106,6 +107,7 @@ namespace Gameplay.Entities.Common.Weapons.RangedWeapons
             }
             //Testing feature, the final product must obtain the ammo from an ammo storage
             ammoClip.ReloadAmmo(ammoClip.MaxAmmo);
+            Debug.Log($"Ammo reloaded{ammoClip.CurrentAmmo}");
             isReloading = false;
         }
     }
