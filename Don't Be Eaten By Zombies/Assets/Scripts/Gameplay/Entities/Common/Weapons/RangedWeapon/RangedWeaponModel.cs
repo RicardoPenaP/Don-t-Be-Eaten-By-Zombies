@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 namespace Gameplay.Entities.Common.Weapons.RangedWeapons
@@ -9,16 +10,50 @@ namespace Gameplay.Entities.Common.Weapons.RangedWeapons
         [SerializeField] private Transform shootingPosition;
         [SerializeField] private RangedWeaponSettings weaponSettings;
 
-        public void Attack()
-        {
+        private float attackCooldown;
+        private bool canAttack = true;
+        private bool isReloading = false;
 
+
+        private void Awake()
+        {
+            Init();
         }
 
-        public void Reload()
+        private void Init()
         {
-
+            attackCooldown = 1 / weaponSettings.FireRate;
         }
 
+        public bool TryAttack()
+        {
+            if (!canAttack)
+            {
+                return false;
+            }
 
+            //Bullet handling logic
+
+            Debug.Log("Attack successfull");
+            StartCoroutine(AttackCooldownRoutine());
+            return true;
+        }
+
+        public bool TryReload()
+        {
+            return false;
+        }
+
+        private IEnumerator AttackCooldownRoutine()
+        {
+            canAttack = false;
+            float timer = 0f;
+            while (timer < attackCooldown)
+            {
+                timer += Time.deltaTime;
+                yield return null;
+            }
+            canAttack = true;
+        }
     }
 }
