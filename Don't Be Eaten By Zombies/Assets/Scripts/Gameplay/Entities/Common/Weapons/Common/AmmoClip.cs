@@ -27,7 +27,7 @@ namespace Gameplay.Entities.Common.Weapons.Common
 
         public bool TryTakeAmmo()
         {
-            currentAmmo--;
+            currentAmmo = Mathf.Clamp(currentAmmo - 1, 0, maxAmmo);
             if (currentAmmo <= 0)
             {
                 OutOfAmmo?.Invoke();
