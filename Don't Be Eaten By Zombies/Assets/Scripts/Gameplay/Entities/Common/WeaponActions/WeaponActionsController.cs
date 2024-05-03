@@ -31,7 +31,7 @@ namespace Gameplay.Entities.Common.WeaponActions
             Deinit();
         }
 
-        private void WeaponActionsView_OnAttackInputDetected(bool obj)
+        private void WeaponActionsView_OnAttackInputDetected()
         {
             weaponActionsModel.Attack();
         }
