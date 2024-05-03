@@ -2,6 +2,6 @@
 {
     public interface IAttackModel
     {
-
+        public void Attack();
     }
 }
