@@ -4,10 +4,10 @@ namespace Gameplay.Entities.Common.WeaponsActions
 {
     public class WeaponsActionsController : IDisposable
     {
-        private readonly IAttackView attackView;
+        private readonly IWeaponsActionsView attackView;
         private readonly IAttackModel attackModel;
 
-        public WeaponsActionsController(IAttackView attackView, IAttackModel attackModel)
+        public WeaponsActionsController(IWeaponsActionsView attackView, IAttackModel attackModel)
         {
             this.attackView = attackView;
             this.attackModel = attackModel;
