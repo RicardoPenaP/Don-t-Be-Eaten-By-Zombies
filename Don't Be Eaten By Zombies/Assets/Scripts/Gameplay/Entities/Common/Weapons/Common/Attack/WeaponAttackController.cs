@@ -28,5 +28,13 @@ namespace Gameplay.Entities.Common.Weapons.Common.Attack
         {
             Deinit();
         }
+
+        public void Attack()
+        {
+            if (weaponAttackModel.TryAttack())
+            {
+                //Activates the VFX and SFX in the view
+            }
+        }
     }
 }
