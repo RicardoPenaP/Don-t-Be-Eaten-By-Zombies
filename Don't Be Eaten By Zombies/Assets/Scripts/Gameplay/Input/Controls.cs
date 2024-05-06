@@ -254,17 +254,6 @@ namespace Gameplay.Input
                 },
                 {
                     ""name"": """",
-                    ""id"": ""7b2c1c92-a0d6-4790-b610-554a62605cd5"",
-                    ""path"": ""<Gamepad>/rightShoulder"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": ""TouchScreen"",
-                    ""action"": ""Attack"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
                     ""id"": ""01ac3d6a-f027-4caa-9e9b-fa70da6203a7"",
                     ""path"": ""<Mouse>/leftButton"",
                     ""interactions"": """",

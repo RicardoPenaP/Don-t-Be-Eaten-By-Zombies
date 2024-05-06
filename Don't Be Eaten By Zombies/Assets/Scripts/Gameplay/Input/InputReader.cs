@@ -8,6 +8,9 @@ namespace Gameplay.Input
     [CreateAssetMenu(menuName = "Gameplay/Input/Input Reader", fileName = "NewInputReader")]
     public class InputReader : ScriptableObject, IPlayerActions
     {
+        [Header("Input Reader")]
+        [SerializeField, Range(0f, 1f)] private float attackInputDeathzone = 0.6f;
+
         public event Action<Vector2> OnAimInputUpdated;
         public event Action<bool> OnAttackInputUpdated;
         public event Action OnChangeWeaponInputUpdated;
@@ -43,19 +46,10 @@ namespace Gameplay.Input
 
         public void OnAttack(InputAction.CallbackContext context)
         {
-            bool state = false;
-            switch (context.phase)
-            {
-                case InputActionPhase.Performed:
-                    state = true;
-                    break;
-                case InputActionPhase.Canceled:
-                    state = false;
-                    break;
-                default:
-                    break;
-            }
-            OnAttackInputUpdated?.Invoke(state);
+#if UNITY_ANDROID         
+            Vector2 rawInput = context.ReadValue<Vector2>();
+            OnAttackInputUpdated?.Invoke(rawInput.magnitude >= attackInputDeathzone);
+#endif
         }
 
         public void OnChangeWeapon(InputAction.CallbackContext context)
