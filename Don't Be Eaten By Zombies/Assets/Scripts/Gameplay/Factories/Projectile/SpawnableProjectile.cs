@@ -5,7 +5,9 @@ namespace Gameplay.Factories.Assets.Scripts.Gameplay.Factories.Projectile
 {
     public class SpawnableProjectile : MonoBehaviour
     {
-        //[Header("Spawnable Projectile")]
-        //[SerializeField] private string namess;
+        [Header("Spawnable Projectile")]
+        [SerializeField] private SpawnableProjectileId id;
+
+        public SpawnableProjectileId Id => id;
     }
 }
