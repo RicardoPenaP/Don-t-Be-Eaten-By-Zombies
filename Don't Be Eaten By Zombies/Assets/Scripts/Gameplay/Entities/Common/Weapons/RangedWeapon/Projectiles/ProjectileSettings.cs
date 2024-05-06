@@ -3,7 +3,7 @@
 namespace Gameplay.Entities.Common.Weapons.RangedWeapon.Projectiles
 {
     [CreateAssetMenu(fileName = "NewProjectileSettings", 
-                    menuName = "Gameplay/Entities/Common/Weapons/RangedWeapon/Projectiles/BulletSettings")]
+                    menuName = "Gameplay/Entities/Common/Weapons/RangedWeapon/Projectiles/Bullet Settings")]
     public class ProjectileSettings : ScriptableObject
     {
         [Header("Projectile Settings")]
