@@ -2,7 +2,7 @@
 
 namespace Gameplay.Entities.Common.Weapons.RangedWeapon
 {
-    [CreateAssetMenu(fileName = "NewRangedWeaponSettings", menuName = "Gameplay/Entities/Common/Weapons/Ranged Weapon Settings")]
+    [CreateAssetMenu(fileName = "NewRangedWeaponSettings", menuName = "Gameplay/Entities/Common/Weapons/RangedWeapon/ Ranged Weapon Settings")]
     public class RangedWeaponSettings : ScriptableObject
     {
         [Header("Ranged Weapons Settings")]
