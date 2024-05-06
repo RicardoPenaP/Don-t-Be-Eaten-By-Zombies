@@ -24,7 +24,7 @@ namespace Gameplay.Factories.Projectile
             }
         }
 
-        public GameObject SpawnProjectile(Vector3 spawnPosition)
+        public GameObject SpawnProjectile(Vector3 spawnPosition, SpawnableProjectileId id)
         {
             return null;
         }
