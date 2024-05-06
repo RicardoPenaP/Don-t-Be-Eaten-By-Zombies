@@ -1,4 +1,4 @@
-﻿namespace Gameplay.Factories.Assets.Scripts.Gameplay.Factories.Projectile
+﻿namespace Gameplay.Factories.Projectile
 {
     public enum SpawnableProjectileId
     {

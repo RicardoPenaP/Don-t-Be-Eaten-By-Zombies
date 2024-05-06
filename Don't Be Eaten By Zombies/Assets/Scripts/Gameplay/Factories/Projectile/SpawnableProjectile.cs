@@ -1,7 +1,6 @@
-﻿using System.Collections;
-using UnityEngine;
+﻿using UnityEngine;
 
-namespace Gameplay.Factories.Assets.Scripts.Gameplay.Factories.Projectile
+namespace Gameplay.Factories.Projectile
 {
     public class SpawnableProjectile : MonoBehaviour
     {

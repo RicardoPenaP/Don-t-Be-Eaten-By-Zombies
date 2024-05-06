@@ -10,7 +10,7 @@ namespace Gameplay.Factories.Projectile
 
         [Header("Projectile Factory")]
         [Header("References")]
-        [SerializeField] GameObject projectiles;
+        [SerializeField] SpawnableProjectile projectiles;
 
         private void Awake()
         {
