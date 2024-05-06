@@ -102,6 +102,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bulletView: {fileID: 6387070560986648758}
   bulletModel: {fileID: 3888150237436374260}
+--- !u!50 &4590823533929558351 stripped
+Rigidbody2D:
+  m_CorrespondingSourceObject: {fileID: 7917570176114750837, guid: 71ae4443616b25046b24c98db4885e3e, type: 3}
+  m_PrefabInstance: {fileID: 5932715764390036538}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &5667314039960400802 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2086122763423610776, guid: 71ae4443616b25046b24c98db4885e3e, type: 3}
@@ -119,4 +124,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d1c3729e18458f14086e6efabeea9353, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletRigidbody: {fileID: 0}
+  bulletRigidbody: {fileID: 4590823533929558351}
