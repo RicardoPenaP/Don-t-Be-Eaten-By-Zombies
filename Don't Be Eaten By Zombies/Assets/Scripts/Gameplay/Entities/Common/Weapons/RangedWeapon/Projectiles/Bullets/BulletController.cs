@@ -7,10 +7,8 @@ namespace Gameplay.Entities.Common.Weapons.RangedWeapon.Projectiles.Bullets
     {
         [Header("Bullet Controller")]
         [Header("References")]
-        [SerializeField] BulletView bulletView;
-        [SerializeField] BulletModel bulletModel;
-
-
+        [SerializeField] private BulletView bulletView;
+        [SerializeField] private BulletModel bulletModel;
 
         public void SetProjectileData()
         {
