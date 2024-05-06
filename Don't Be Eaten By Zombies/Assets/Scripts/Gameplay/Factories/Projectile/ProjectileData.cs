@@ -1,6 +1,6 @@
 using System;
 
-namespace Gameplay.Entities.Common.Weapons.RangedWeapon.Projectiles
+namespace Gameplay.Factories.Projectile
 {
     [Serializable]
     public class ProjectileData 
