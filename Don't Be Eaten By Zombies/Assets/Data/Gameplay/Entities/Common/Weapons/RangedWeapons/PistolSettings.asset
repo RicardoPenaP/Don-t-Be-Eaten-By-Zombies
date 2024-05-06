@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f25b290483e44e4f954e4b8bdedd4af, type: 3}
   m_Name: PistolSettings
   m_EditorClassIdentifier: 
+  projectileSettings: {fileID: 11400000, guid: aa247ec91599afa4aadf7ea7a0437d7b, type: 2}
   damage: 10
   clipSize: 10
   reloadTime: 1.5
