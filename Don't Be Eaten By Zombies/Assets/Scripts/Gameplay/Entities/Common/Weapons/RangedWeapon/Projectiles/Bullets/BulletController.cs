@@ -15,10 +15,7 @@ namespace Gameplay.Entities.Common.Weapons.RangedWeapon.Projectiles.Bullets
             throw new System.NotImplementedException();
         }
 
-        public void StarProjectileMovement()
-        {
-            throw new System.NotImplementedException();
-        }
+        public void StarProjectileMovement() => bulletModel.StartBulletMovement();        
 
     }
 }
