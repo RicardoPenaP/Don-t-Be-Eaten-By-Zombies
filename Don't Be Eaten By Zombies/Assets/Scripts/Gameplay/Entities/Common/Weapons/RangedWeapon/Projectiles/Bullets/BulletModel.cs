@@ -8,16 +8,16 @@ namespace Gameplay.Entities.Common.Weapons.RangedWeapon.Projectiles.Bullets
         [Header("References")]
         [SerializeField] private Rigidbody2D bulletRigidbody;
 
-        private ProjectileSettings projectileSettings;
+        private ProjectileData projectileData;
 
-        public void SetProjectileData(ProjectileSettings projectileSettings)
+        public void SetProjectileData(ProjectileData projectileData)
         {
-            this.projectileSettings = projectileSettings;
+            this.projectileData = projectileData;
         }
 
         public void StartBulletMovement()
         {
-            bulletRigidbody.velocity = transform.right * projectileSettings.Speed;
+            //bulletRigidbody.velocity = transform.right * projectileData.Speed;
         }
     }
 }
