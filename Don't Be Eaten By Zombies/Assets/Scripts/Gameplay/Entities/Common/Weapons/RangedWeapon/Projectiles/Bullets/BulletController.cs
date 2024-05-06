@@ -12,9 +12,9 @@ namespace Gameplay.Entities.Common.Weapons.RangedWeapon.Projectiles.Bullets
         public void SetProjectileData(ProjectileData projectileData)
         {
             bulletModel.SetProjectileData(projectileData);
+            bulletModel.StartBulletMovement();
         }
-
-        public void StarProjectileMovement() => bulletModel.StartBulletMovement();        
+     
 
     }
 }
