@@ -10,7 +10,7 @@ namespace Gameplay.Factories.Projectile
 
         [Header("Projectile Factory")]
         [Header("References")]
-        [SerializeField] SpawnableProjectile projectiles;
+        [SerializeField] SpawnableProjectile[] projectilePrefabs;
 
         private void Awake()
         {
@@ -24,9 +24,35 @@ namespace Gameplay.Factories.Projectile
             }
         }
 
-        public GameObject SpawnProjectile(Vector3 spawnPosition, SpawnableProjectileId id)
+        public void SpawnProjectile(Vector3 spawnPosition, SpawnableProjectileId id, ProjectileData projectileData)
         {
-            return null;
+            if (TryGetProjectilePrefab(id, out SpawnableProjectile projectilePrefab))
+            {
+                
+            }
+            else
+            {
+                Debug.LogError($"This factory doesn\'t have any reference to that Id");
+            }
+        }
+
+        private bool TryGetProjectilePrefab(SpawnableProjectileId id, out SpawnableProjectile projectilePrefab)
+        {
+            foreach (SpawnableProjectile projectile in projectilePrefabs)
+            {
+                if (!projectile.Id.Equals(id))
+                {
+                    continue;
+                }
+                else
+                {
+                    projectilePrefab = projectile;
+                    return true;
+                }
+            }
+
+            projectilePrefab = null;
+            return false;
         }
     }
 }
