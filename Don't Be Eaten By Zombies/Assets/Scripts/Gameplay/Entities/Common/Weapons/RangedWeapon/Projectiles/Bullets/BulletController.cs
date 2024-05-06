@@ -3,8 +3,8 @@ using UnityEngine;
 
 namespace Gameplay.Entities.Common.Weapons.RangedWeapon.Projectiles.Bullets
 {
-    public class NormalBulletController : MonoBehaviour, IProjectileController
-    {
+    public class BulletController : MonoBehaviour, IProjectileController
+    {        
         public void SetProjectileData()
         {
             throw new System.NotImplementedException();
