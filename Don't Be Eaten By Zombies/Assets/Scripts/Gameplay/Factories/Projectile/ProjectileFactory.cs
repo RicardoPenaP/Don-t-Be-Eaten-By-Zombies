@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace Gameplay.Factories
+namespace Gameplay.Factories.Projectile
 {
     public class ProjectileFactory : MonoBehaviour
     {
