@@ -1,6 +1,4 @@
-using Gameplay.Entities.Common.Weapons.RangedWeapon.Projectiles;
-
-namespace Gameplay.Entities.Common.Weapons.RangedWeapons.Projectiles
+namespace Gameplay.Entities.Common.Weapons.RangedWeapon.Projectiles
 {
     public interface IProjectileController
     {

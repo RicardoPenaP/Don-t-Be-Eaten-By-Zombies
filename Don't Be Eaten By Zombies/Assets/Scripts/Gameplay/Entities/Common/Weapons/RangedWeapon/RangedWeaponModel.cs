@@ -4,7 +4,7 @@ using Gameplay.Entities.Common.Weapons.Common.Reload;
 using System.Collections;
 using UnityEngine;
 
-namespace Gameplay.Entities.Common.Weapons.RangedWeapons
+namespace Gameplay.Entities.Common.Weapons.RangedWeapon
 {
     public class RangedWeaponModel : MonoBehaviour, IWeaponAttackModel, IWeaponReloadModel
     {

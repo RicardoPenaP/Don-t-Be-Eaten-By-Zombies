@@ -1,5 +1,4 @@
-﻿using Gameplay.Entities.Common.Weapons.RangedWeapons.Projectiles;
-using UnityEngine;
+﻿using UnityEngine;
 
 namespace Gameplay.Entities.Common.Weapons.RangedWeapon.Projectiles.Bullets
 {

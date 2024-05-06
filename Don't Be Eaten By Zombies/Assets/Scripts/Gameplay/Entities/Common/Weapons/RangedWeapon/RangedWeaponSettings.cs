@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace Gameplay.Entities.Common.Weapons.RangedWeapons
+namespace Gameplay.Entities.Common.Weapons.RangedWeapon
 {
     [CreateAssetMenu(fileName = "NewRangedWeaponSettings", menuName = "Gameplay/Entities/Common/Weapons/Ranged Weapon Settings")]
     public class RangedWeaponSettings : ScriptableObject
