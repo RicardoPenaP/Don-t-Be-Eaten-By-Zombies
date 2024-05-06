@@ -10,7 +10,7 @@ namespace Gameplay.Entities.Common.Weapons.RangedWeapon.Projectiles.Bullets
         [SerializeField] private BulletView bulletView;
         [SerializeField] private BulletModel bulletModel;
 
-        public void SetProjectileData()
+        public void SetProjectileData(ProjectileSettings projectileSettings)
         {
             throw new System.NotImplementedException();
         }
