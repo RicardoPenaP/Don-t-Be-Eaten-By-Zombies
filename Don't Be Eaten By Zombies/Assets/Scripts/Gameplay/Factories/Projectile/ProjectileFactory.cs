@@ -28,8 +28,12 @@ namespace Gameplay.Factories.Projectile
         {
             if (TryGetProjectilePrefab(id, out SpawnableProjectile projectilePrefab))
             {
-                IProjectileController projectileController = Instantiate(projectilePrefab, spawnPosition, Quaternion.Euler(rotation), transform)
+                IProjectileController projectileController = Instantiate(projectilePrefab,
+                                                            spawnPosition,
+                                                            Quaternion.Euler(rotation), 
+                                                            transform)
                                                             .GetComponentInChildren<IProjectileController>();
+
                 projectileController.SetProjectileData(projectileData);
             }
             else
