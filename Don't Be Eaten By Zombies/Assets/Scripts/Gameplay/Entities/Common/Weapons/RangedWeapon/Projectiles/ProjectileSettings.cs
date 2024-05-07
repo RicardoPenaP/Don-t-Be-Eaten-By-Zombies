@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using Gameplay.Factories.Projectile;
+using UnityEngine;
 
 namespace Gameplay.Entities.Common.Weapons.RangedWeapon.Projectiles
 {
@@ -9,8 +10,11 @@ namespace Gameplay.Entities.Common.Weapons.RangedWeapon.Projectiles
         [Header("Projectile Settings")]        
         [SerializeField] private float range;
         [SerializeField] private float speed;
+        [SerializeField] private SpawnableProjectileId projectileId;
 
         public float Range => range;
         public float Speed => speed;
+
+        public SpawnableProjectileId ProjectileId => projectileId;
     }
 }

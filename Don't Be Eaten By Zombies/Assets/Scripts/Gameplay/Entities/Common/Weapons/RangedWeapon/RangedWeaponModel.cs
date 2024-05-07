@@ -1,6 +1,7 @@
 using Gameplay.Entities.Common.Weapons.Common;
 using Gameplay.Entities.Common.Weapons.Common.Attack;
 using Gameplay.Entities.Common.Weapons.Common.Reload;
+using Gameplay.Factories.Projectile;
 using System.Collections;
 using UnityEngine;
 
@@ -66,8 +67,16 @@ namespace Gameplay.Entities.Common.Weapons.RangedWeapon
                 return false;
             }
 
-            Debug.Log("Attack successfull");
-            Debug.Log($"{ammoClip.CurrentAmmo} ammo left");
+            //Debug.Log("Attack successfull");
+            //Debug.Log($"{ammoClip.CurrentAmmo} ammo left");
+            ProjectileData projectileData = new ProjectileData(weaponSettings.ProjectileSettings.Speed,
+                                                                weaponSettings.Damage,
+                                                                weaponSettings.ProjectileSettings.Range);
+
+            ProjectileFactory.Instance.SpawnProjectile(shootingPosition.position,
+                                                        shootingPosition.eulerAngles,
+                                                        weaponSettings.ProjectileSettings.ProjectileId,
+                                                        projectileData);
             StartCoroutine(AttackCooldownRoutine());
             return true;
         }
