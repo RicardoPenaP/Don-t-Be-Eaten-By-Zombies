@@ -20,19 +20,20 @@ namespace Gameplay.Factories.Projectile
             }
             else
             {
-                instance = this;                
+                instance = this;
             }
         }
 
-        public void SpawnProjectile(Vector3 spawnPosition, SpawnableProjectileId id, ProjectileData projectileData)
+        public SpawnableProjectile SpawnProjectile(Vector3 spawnPosition, Vector3 rotation, SpawnableProjectileId id, ProjectileData projectileData)
         {
             if (TryGetProjectilePrefab(id, out SpawnableProjectile projectilePrefab))
             {
-                
+                return Instantiate(projectilePrefab, spawnPosition, Quaternion.identity, transform);
             }
             else
             {
                 Debug.LogError($"This factory doesn\'t have any reference to that Id");
+                return null;
             }
         }
 
