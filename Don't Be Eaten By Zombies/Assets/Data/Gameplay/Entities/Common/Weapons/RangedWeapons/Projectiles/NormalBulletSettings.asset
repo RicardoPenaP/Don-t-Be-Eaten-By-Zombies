@@ -12,5 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 601bacf3e2d4ba7488aa4a51ce9d0a4f, type: 3}
   m_Name: NormalBulletSettings
   m_EditorClassIdentifier: 
-  range: 0
-  speed: 0
+  range: 50
+  speed: 20
+  projectileId: 1
