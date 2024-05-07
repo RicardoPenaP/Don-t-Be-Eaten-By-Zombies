@@ -1,4 +1,5 @@
 ﻿using Gameplay.Factories.Projectile;
+using System.Collections;
 using UnityEngine;
 
 namespace Gameplay.Entities.Common.Weapons.RangedWeapon.Projectiles.Bullets
@@ -11,6 +12,8 @@ namespace Gameplay.Entities.Common.Weapons.RangedWeapon.Projectiles.Bullets
 
         private ProjectileData projectileData;
 
+        private Vector3 startPosition;
+
         public void SetProjectileData(ProjectileData projectileData)
         {
             this.projectileData = projectileData;
@@ -18,7 +21,25 @@ namespace Gameplay.Entities.Common.Weapons.RangedWeapon.Projectiles.Bullets
 
         public void StartBulletMovement()
         {
-            //bulletRigidbody.velocity = transform.right * projectileData.Speed;
+            bulletRigidbody.velocity = transform.right * projectileData.speed;
+
+            StartCoroutine(SelfDestructRoutine());
+        }
+
+        private IEnumerator SelfDestructRoutine()
+        {
+            startPosition = transform.position;
+            while (Vector3.Distance(transform.position, startPosition) < projectileData.range)
+            {
+                yield return null;
+            }
+
+            SelfDestruct();
+        }
+
+        private void SelfDestruct()
+        {
+            Destroy(transform.parent.gameObject);
         }
     }
 }
