@@ -24,16 +24,17 @@ namespace Gameplay.Factories.Projectile
             }
         }
 
-        public SpawnableProjectile SpawnProjectile(Vector3 spawnPosition, Vector3 rotation, SpawnableProjectileId id, ProjectileData projectileData)
+        public void SpawnProjectile(Vector3 spawnPosition, Vector3 rotation, SpawnableProjectileId id, ProjectileData projectileData)
         {
             if (TryGetProjectilePrefab(id, out SpawnableProjectile projectilePrefab))
             {
-                return Instantiate(projectilePrefab, spawnPosition, Quaternion.identity, transform);
+                IProjectileController projectileController = Instantiate(projectilePrefab, spawnPosition, Quaternion.Euler(rotation), transform)
+                                                            .GetComponentInChildren<IProjectileController>();
+                projectileController.SetProjectileData(projectileData);
             }
             else
             {
-                Debug.LogError($"This factory doesn\'t have any reference to that Id");
-                return null;
+                Debug.LogError($"This factory doesn\'t have any reference to that Id");               
             }
         }
 
